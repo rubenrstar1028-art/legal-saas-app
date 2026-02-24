@@ -1,0 +1,69 @@
+.notifications-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 180px;
+    width: 380px;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    padding: 16px 0;
+    max-height: 480px;
+    overflow-y: auto;
+}
+
+.notifications-dropdown h3 {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 0 16px 12px;
+    margin: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.noti-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.noti-item {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    transition: background-color 0.2s;
+}
+
+.noti-item:hover {
+    background-color: var(--bg-primary);
+}
+
+.noti-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-danger);
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+.noti-item p {
+    font-size: 13px;
+    margin: 0 0 4px 0;
+    color: var(--text-main);
+    line-height: 1.4;
+}
+
+.noti-item small {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.empty-noti {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 13px;
+}

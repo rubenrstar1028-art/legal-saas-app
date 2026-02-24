@@ -1,0 +1,153 @@
+.kanban-board {
+    display: flex;
+    gap: 16px;
+    height: calc(100vh - 180px);
+    /* Fill remaining space */
+    overflow: hidden;
+    /* Avoid horizontal scroll, 5 cols fit 1920px easily */
+    padding-bottom: 24px;
+}
+
+.kanban-column {
+    flex: 1;
+    /* Equal width for all 5 columns */
+    background-color: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: background-color 0.2s;
+}
+
+.kanban-column:dragover {
+    background-color: rgba(52, 152, 219, 0.05);
+    /* very light blue hint */
+    border: 1px dashed var(--color-primary);
+}
+
+.column-header {
+    padding: 16px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-primary);
+}
+
+.column-header h3 {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.card-count {
+    background-color: var(--border-color);
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.column-content {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kanban-card {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--border-color);
+    /* Updated dynamically */
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kanban-card.draggable {
+    cursor: grab;
+}
+
+.kanban-card.draggable:active {
+    cursor: grabbing;
+    opacity: 0.8;
+}
+
+.kanban-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-exp-id {
+    font-weight: 700;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.pts-badge {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: var(--color-primary);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lawyer-info {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.tiny-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--border-color);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.card-actions button {
+    color: var(--text-muted);
+    font-size: 14px;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.card-actions button:hover {
+    background-color: var(--bg-primary);
+    color: var(--color-primary);
+}

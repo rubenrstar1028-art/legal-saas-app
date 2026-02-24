@@ -1,0 +1,77 @@
+.roles-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.role-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+}
+
+.role-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.role-stat-icon.jud {
+    background-color: rgba(41, 128, 185, 0.1);
+    color: #2980B9;
+}
+
+.role-stat-icon.admin {
+    background-color: rgba(149, 165, 166, 0.1);
+    color: #95A5A6;
+}
+
+.role-stat-icon.abogado {
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498DB;
+}
+
+.role-stat-info h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.role-stat-info p {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-main);
+    line-height: 1;
+}
+
+.role-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.role-badge.jud {
+    background-color: rgba(41, 128, 185, 0.2);
+    color: #2980B9;
+}
+
+.role-badge.administrativo {
+    background-color: rgba(149, 165, 166, 0.2);
+    color: #7F8C8D;
+}
+
+.role-badge.abogado {
+    background-color: rgba(52, 152, 219, 0.2);
+    color: var(--color-primary);
+}
+
+.row-actions {
+    display: flex;
+    gap: 8px;
+}

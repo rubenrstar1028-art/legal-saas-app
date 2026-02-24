@@ -1,0 +1,89 @@
+.archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.archive-table-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+    /* To keep table structured */
+}
+
+.table-filters {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 8px;
+}
+
+.filter-select {
+    padding: 8px 16px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+}
+
+.inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.inventory-table th,
+.inventory-table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 14px;
+}
+
+.inventory-table th {
+    color: var(--text-muted);
+    font-weight: 500;
+    background-color: var(--bg-primary);
+}
+
+.inventory-table tbody tr {
+    transition: background-color 0.2s;
+}
+
+.inventory-table tbody tr:hover {
+    background-color: var(--bg-primary);
+}
+
+.fw-bold {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.poseedor-cell {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.status-badge {
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.status-badge.danger {
+    background-color: rgba(231, 76, 60, 0.1);
+    color: var(--color-danger);
+}
+
+.status-badge.success {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: var(--color-success);
+}
+
+.status-badge.neutral {
+    background-color: rgba(107, 114, 128, 0.1);
+    color: var(--text-muted);
+}
