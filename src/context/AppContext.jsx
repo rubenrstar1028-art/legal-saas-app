@@ -187,8 +187,6 @@ export const AppProvider = ({ children }) => {
         toggleDarkMode,
         isQRModalOpen,
         toggleQRModal,
-        isQRModalOpen,
-        toggleQRModal,
         globalActivities,
         addActivity,
         cases,
